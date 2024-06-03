@@ -14,7 +14,8 @@
       integeration = {
         cmp = true;
         gitsigns = true;
-        notify = false;
+        which-key = true;
+        fidget = true;
         treesitter = true;
         treesitter_context = true;
         neotree = true;

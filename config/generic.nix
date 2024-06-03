@@ -4,12 +4,7 @@
     neo-tree.enable = true;
     neocord.enable = true;
     nvim-colorizer.enable = true;
-
-    bufferline = {
-      enable = true;
-      alwaysShowBufferline = false;
-      diagnostics = "nvim_lsp";
-    };
+    which-key.enable = true;
 
     treesitter = {
       enable = true;
@@ -47,13 +42,9 @@
       enable = true;
       settings = {
         autochdir = true;
-        direction = "float";
-        float_opts = {
-          border = "single";
-          height = 30;
-          width = 130;
-        };
-        open_mapping = "[[<A-i>]]";
+        direction = "horizontal";
+        open_mapping = "[[<A-h>]]";
+        size = 20;
       };
     };
 
@@ -66,6 +57,11 @@
           show_start = false;
         };
       };
+    };
+
+    fidget = {
+      enable = true;
+      notification.window.winblend = 0;
     };
   };
 }

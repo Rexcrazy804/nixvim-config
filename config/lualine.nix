@@ -11,5 +11,13 @@
       left = "";
       right = "";
     };
+
+    tabline = {
+      lualine_a = [
+        {
+          name = "buffers";
+        }
+      ];
+    };
   };
 }

@@ -5,7 +5,7 @@
       action = "<CMD>BufferLineCycleNext<CR>";
       key = "<Tab>";
       options = {
-        desc = "cycle next buffer";
+        desc = "Cycle next buffer";
         silent = true;
       };
     }
@@ -13,7 +13,7 @@
       action = "<CMD>BufferLineCyclePrev<CR>";
       key = "<S-Tab>";
       options = {
-        desc = "cycle prev buffer";
+        desc = "Cycle prev buffer";
         silent = true;
       };
     }
@@ -21,7 +21,7 @@
       action = "<CMD>bdelete<CR>";
       key = "<leader>x";
       options = {
-        desc = "delete current buffer";
+        desc = "Delete current buffer";
         silent = true;
       };
     }
@@ -29,7 +29,7 @@
       action = "<CMD>bdelete!<CR>";
       key = "<leader>X";
       options = {
-        desc = "force delete current buffer";
+        desc = "Force delete current buffer";
         silent = true;
       };
     }
@@ -39,7 +39,7 @@
       action = "<CMD>Neotree toggle<CR>";
       key = "<C-n>";
       options = {
-        desc = "toggle Neotree pretty much";
+        desc = "Toggle Neotree pretty much";
         silent = true;
       };
     }
@@ -69,13 +69,27 @@
         silent = true;
       };
     }
-
-    # ToggleTerm
     {
-      action = "<CMD>ToggleTerm size=15 dir=git_dir direction=horizontal name=horimiya<CR>";
-      key = "<A-h>";
+      action = "<CMD>Telescope oldfiles<CR>";
+      key = "<leader>fo";
       options = {
-        desc = "Open a horizontal terminal";
+        desc = "Find recently opened files";
+        silent = true;
+      };
+    }
+    {
+      action = "<CMD>Telescope diagnostics<CR>";
+      key = "<leader>lF";
+      options = {
+        desc = "Find Lsp Diagnostics";
+        silent = true;
+      };
+    }
+    {
+      action = "<CMD>Telescope lsp_workspace_symbols<CR>";
+      key = "<leader>fd";
+      options = {
+        desc = "Find LSP workspace symbols";
         silent = true;
       };
     }
