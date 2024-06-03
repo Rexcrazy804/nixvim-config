@@ -2,7 +2,7 @@
   keymaps = [
     # buffers
     {
-      action = "<CMD>BufferLineCycleNext<CR>";
+      action = "<CMD>bnext<CR>";
       key = "<Tab>";
       options = {
         desc = "Cycle next buffer";
@@ -10,7 +10,7 @@
       };
     }
     {
-      action = "<CMD>BufferLineCyclePrev<CR>";
+      action = "<CMD>bprevious<CR>";
       key = "<S-Tab>";
       options = {
         desc = "Cycle prev buffer";

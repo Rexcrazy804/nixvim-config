@@ -16,6 +16,9 @@
       lualine_a = [
         {
           name = "buffers";
+          extraConfig = {
+            symbols.alternate_file = "";
+          };
         }
       ];
     };
