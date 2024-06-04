@@ -56,8 +56,14 @@
       options.desc = "Find Lsp Diagnostics";
     }
     {
-      action = "<CMD>Telescope lsp_workspace_symbols<CR>";
+      action = "<CMD>Telescope lsp_document_symbols<CR>";
       key = "<leader>fd";
+      options.desc = "Find LSP document symbols";
+    }
+
+    {
+      action = "<CMD>Telescope lsp_workspace_symbols<CR>";
+      key = "<leader>fD";
       options.desc = "Find LSP workspace symbols";
     }
   ];
