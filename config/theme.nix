@@ -18,12 +18,9 @@
         gitsigns = true;
         which-key = true;
         treesitter = true;
-        indent_blankline.enabled = true;
 
-        telescope = {
-          enable = true;
-          style = "nvchad";
-        };
+        telescope.enabled = true;
+        indent_blankline.enabled = true;
 
         native_lsp = {
           enabled = true;
