@@ -1,5 +1,10 @@
 {
   plugins = {
+    lspkind = {
+      enable = true;
+      cmp.enable = true;
+    };
+
     lsp-format.enable = true;
 
     lsp = {

@@ -27,10 +27,13 @@
           "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
         };
 
+        formatting.fields = ["kind" "abbr" "menu"];
+
         sources = [
           {name = "path";}
           {name = "nvim_lsp";}
           {name = "buffer";}
+          {name = "emoji";}
         ];
       };
     };
