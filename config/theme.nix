@@ -13,12 +13,12 @@
 
       integeration = {
         cmp = true;
+        fidget = true;
+        neotree = true;
         gitsigns = true;
         which-key = true;
-        fidget = true;
         treesitter = true;
-        treesitter_context = true;
-        neotree = true;
+        indent_blankline.enabled = true;
 
         telescope = {
           enable = true;
@@ -36,10 +36,6 @@
             information = ["underline"];
             warnings = ["underline"];
           };
-        };
-
-        indent_blankline = {
-          enabled = true;
         };
       };
     };
