@@ -11,12 +11,34 @@
       enable = true;
 
       servers = {
-        nil_ls.enable = true;
+        java-language-server.enable = true;
+
         rust-analyzer = {
           enable = true;
 
           installCargo = false;
           installRustc = false;
+
+          settings = {
+            check = {
+              command = "clippy";
+              invocationLocation = "workspace";
+            };
+
+            diagnostics.styleLints.enable = true;
+            rustfmt.rangeFormatting.enable = true;
+          };
+        };
+
+        nil_ls = {
+          enable = true;
+          settings.nix = {
+            flake = {
+              autoEvalInputs = false;
+              nixpkgsInputName = "nixpkgs";
+            };
+            formatting.command = ["alejandra"];
+          };
         };
       };
 
@@ -70,6 +92,16 @@
             desc = "Previous Diagnostic";
           };
         };
+        extra = [
+          {
+            key = "<leader>ca";
+            action = "<CMD>lua vim.lsp.buf.code_action()<CR>";
+            mode = ["n" "v"];
+            options = {
+              desc = "Code actions Menu";
+            };
+          }
+        ];
       };
     };
   };
