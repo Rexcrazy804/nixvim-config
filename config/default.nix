@@ -11,6 +11,7 @@
   ];
 
   opts = {
+    number = true;
     termguicolors = true;
     cmdheight = 0;
     relativenumber = true;
