@@ -5,6 +5,7 @@
     neocord.enable = true;
     nvim-colorizer.enable = true;
     which-key.enable = true;
+    nvim-autopairs.enable = true;
 
     treesitter = {
       enable = true;
@@ -12,31 +13,6 @@
       nixvimInjections = true;
     };
 
-    autoclose = {
-      enable = true;
-      keys = {
-        "(" = {
-          escape = false;
-          close = true;
-          pair = "()";
-        };
-        "[" = {
-          escape = false;
-          close = true;
-          pair = "[]";
-        };
-        "{" = {
-          escape = false;
-          close = true;
-          pair = "{}";
-        };
-        "<" = {
-          escape = false;
-          close = true;
-          pair = "<>";
-        };
-      };
-    };
 
     toggleterm = {
       enable = true;
