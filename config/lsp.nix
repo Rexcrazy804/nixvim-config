@@ -28,7 +28,7 @@
           };
         };
 
-        nil_ls = {
+        nil-ls = {
           enable = true;
           settings.nix = {
             flake = {
