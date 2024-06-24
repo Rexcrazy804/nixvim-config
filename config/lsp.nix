@@ -81,9 +81,17 @@
             action = "workspace_symbol";
             desc = "Workspace Symbol";
           };
-          "<leader>cr" = {
+          "<leader>ra" = {
             action = "rename";
             desc = "Rename";
+          };
+          "<leader>cr" = {
+            action = "references";
+            desc = "References";
+          };
+          "<leader>fm" = {
+            action = "format";
+            desc = "Run the lsp formatter";
           };
         };
         diagnostic = {
