@@ -38,6 +38,16 @@
             formatting.command = ["alejandra"];
           };
         };
+
+        dartls = {
+          enable = true;
+          settings = {
+            completeFunctionCalls = true;
+            documentation = "full";
+            renameFilesWithClasses = "always";
+            updateImportsOnRename = true;
+          };
+        };
       };
 
       keymaps = {
