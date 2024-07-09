@@ -6,6 +6,7 @@
     nvim-colorizer.enable = true;
     which-key.enable = true;
     nvim-autopairs.enable = true;
+    gitsigns.enable = true;
 
     treesitter = {
       enable = true;

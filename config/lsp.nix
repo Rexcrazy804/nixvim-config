@@ -39,15 +39,15 @@
           };
         };
 
-        dartls = {
-          enable = true;
-          settings = {
-            completeFunctionCalls = true;
-            documentation = "full";
-            renameFilesWithClasses = "always";
-            updateImportsOnRename = true;
-          };
-        };
+        # dartls = {
+        #   enable = true;
+        #   settings = {
+        #     completeFunctionCalls = true;
+        #     documentation = "full";
+        #     renameFilesWithClasses = "always";
+        #     updateImportsOnRename = true;
+        #   };
+        # };
       };
 
       keymaps = {
