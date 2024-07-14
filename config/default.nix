@@ -1,4 +1,4 @@
-{
+{...}: {
   # Import all your configuration modules here
   imports = [
     ./keymaps.nix
@@ -8,6 +8,7 @@
     ./cmp.nix
     ./telescope.nix
     ./lualine.nix
+    ./treesitter.nix
   ];
 
   opts = {

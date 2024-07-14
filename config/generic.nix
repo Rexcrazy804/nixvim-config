@@ -8,11 +8,6 @@
     nvim-autopairs.enable = true;
     gitsigns.enable = true;
 
-    treesitter = {
-      enable = true;
-      indent = true;
-      nixvimInjections = true;
-    };
 
 
     toggleterm = {
