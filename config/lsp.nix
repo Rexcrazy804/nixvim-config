@@ -28,6 +28,8 @@
           };
         };
 
+        clangd.enable = true;
+
         nil-ls = {
           enable = true;
           settings.nix = {
