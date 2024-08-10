@@ -14,26 +14,36 @@ in {
 
   plugins.treesitter = {
     enable = true;
-    indent = true;
     nixvimInjections = true;
 
     languageRegister.nu = "nu";
-    grammarPackages = [ nu-grammar ] ++ pkgs.vimPlugins.nvim-treesitter.allGrammars;
+    grammarPackages = [nu-grammar] ++ pkgs.vimPlugins.nvim-treesitter.allGrammars;
+
+    settings = {
+      indent.enable = true;
+    };
   };
 
   extraFiles = {
-    "/queries/nu/highlights.scm" = builtins.readFile "${nu-grammar}/queries/nu/highlights.scm";
-    "/queries/nu/injections.scm" = builtins.readFile "${nu-grammar}/queries/nu/injections.scm";
+    "nu-highlights" = {
+      target = "/queries/nu/highlights.scm";
+      source = "${nu-grammar}/queries/nu/highlights.scm";
+    };
+    "nu-injections" = {
+      target = "/queries/nu/injections.scm";
+      source = "${nu-grammar}/queries/nu/injections.scm";
+    };
   };
 
-  extraConfigLua = /*lua*/ ''
-    local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+  extraConfigLua =
+    /*
+    lua
+    */
+    ''
+      local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 
-    parser_config.liquidsoap = {
-      filetype = "liquidsoap",
-    }
-    parser_config.nu = {
-      filetype = "nu",
-    }
-  '';
+      parser_config.nu = {
+        filetype = "nu",
+      }
+    '';
 }

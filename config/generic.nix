@@ -8,8 +8,6 @@
     nvim-autopairs.enable = true;
     gitsigns.enable = true;
 
-
-
     toggleterm = {
       enable = true;
       settings = {
