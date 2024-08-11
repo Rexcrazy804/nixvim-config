@@ -21,24 +21,16 @@ in {
 
     settings = {
       indent.enable = true;
+      highlight.enable = true;
     };
   };
 
   extraFiles = {
-    "nu-highlights" = {
-      target = "/queries/nu/highlights.scm";
-      source = "${nu-grammar}/queries/nu/highlights.scm";
-    };
-    "nu-injections" = {
-      target = "/queries/nu/injections.scm";
-      source = "${nu-grammar}/queries/nu/injections.scm";
-    };
+    "/queries/nu/highlights.scm".text = builtins.readFile "${nu-grammar}/queries/nu/highlights.scm";
+    "/queries/nu/injections.scm".text = builtins.readFile "${nu-grammar}/queries/nu/injections.scm";
   };
 
-  extraConfigLua =
-    /*
-    lua
-    */
+  extraConfigLua = /* lua */
     ''
       local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 
