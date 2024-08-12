@@ -22,6 +22,15 @@ in {
     settings = {
       indent.enable = true;
       highlight.enable = true;
+      incremental_selection = {
+        enable = true;
+        keymaps = {
+          init_selection = false;
+          node_decremental = "<A-CR>";
+          node_incremental = "<CR>";
+          # scope_incremental = "grc";
+        };
+      };
     };
   };
 
