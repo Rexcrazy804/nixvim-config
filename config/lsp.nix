@@ -1,16 +1,23 @@
-{
+{lib, pkgs, ... }: {
   plugins = {
     lspkind = {
       enable = true;
       cmp.enable = true;
+    };
+    nvim-jdtls = {
+      enable = true;
+      cmd = [
+        (lib.getExe pkgs.jdt-language-server)
+        "-data" "~/.cache/jdtls/workspace"
+        "-configuration" "~/.cache/jdtls/config"
+        "-foo" "bar"
+      ];
     };
 
     lsp = {
       enable = true;
 
       servers = {
-        java-language-server.enable = true;
-
         rust-analyzer = {
           enable = true;
 
