@@ -39,7 +39,10 @@ in {
     "/queries/nu/injections.scm".text = builtins.readFile "${nu-grammar}/queries/nu/injections.scm";
   };
 
-  extraConfigLua = /* lua */
+  extraConfigLua =
+    /*
+    lua
+    */
     ''
       local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 
