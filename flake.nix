@@ -5,12 +5,21 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim = {
       url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        devshell.follows = "";
+        flake-compat.follows = "";
+        git-hooks.follows = "";
+        home-manager.follows = "";
+        nix-darwin.follows = "";
+        treefmt-nix.follows = "";
+      };
     };
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
+
   };
 
   outputs = {
