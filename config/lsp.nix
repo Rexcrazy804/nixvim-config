@@ -8,6 +8,7 @@
       enable = true;
 
       servers = {
+        texlab.enable = true;
         rust-analyzer = {
           enable = true;
 

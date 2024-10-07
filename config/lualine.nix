@@ -15,117 +15,111 @@ let
 in {
   plugins.lualine = {
     enable = true;
-
-    globalstatus = true;
-    componentSeparators = {
-      left = "";
-      right = "";
-    };
-    sectionSeparators = {
-      left = "";
-      right = "";
-    };
-
-    tabline = {
-      lualine_a = [
-        {
-          name = "buffers";
-          extraConfig = {
-            symbols.alternate_file = "";
+    settings = {
+      tabline = {
+        lualine_a = ["buffers"];
+      };
+      options = {
+        globalstatus = true;
+        componentSeparators = {
+          left = "";
+          right = "";
+        };
+        sectionSeparators = {
+          left = "";
+          right = "";
+        };
+        theme = {
+          normal = {
+            a = {
+              bg = colors.lavender;
+              fg = colors.black;
+              gui = "bold";
+            };
+            b = {
+              bg = colors.lightgray;
+              fg = colors.lavender;
+            };
+            c = {
+              bg = colors.transparent;
+              fg = colors.white;
+            };
           };
-        }
-      ];
-    };
-
-    theme = {
-      normal = {
-        a = {
-          bg = colors.lavender;
-          fg = colors.black;
-          gui = "bold";
-        };
-        b = {
-          bg = colors.lightgray;
-          fg = colors.lavender;
-        };
-        c = {
-          bg = colors.transparent;
-          fg = colors.white;
-        };
-      };
-      insert = {
-        a = {
-          bg = colors.blue;
-          fg = colors.black;
-          gui = "bold";
-        };
-        b = {
-          bg = colors.lightgray;
-          fg = colors.blue;
-        };
-        c = {
-          bg = colors.transparent;
-          fg = colors.white;
-        };
-      };
-      visual = {
-        a = {
-          bg = colors.red;
-          fg = colors.black;
-          gui = "bold";
-        };
-        b = {
-          bg = colors.lightgray;
-          fg = colors.red;
-        };
-        c = {
-          bg = colors.transparent;
-          fg = colors.white;
-        };
-      };
-      replace = {
-        a = {
-          bg = colors.yellow;
-          fg = colors.black;
-          gui = "bold";
-        };
-        b = {
-          bg = colors.lightgray;
-          fg = colors.yellow;
-        };
-        c = {
-          bg = colors.transparent;
-          fg = colors.white;
-        };
-      };
-      command = {
-        a = {
-          bg = colors.green;
-          fg = colors.black;
-          gui = "bold";
-        };
-        b = {
-          bg = colors.lightgray;
-          fg = colors.green;
-        };
-        c = {
-          bg = colors.transparent;
-          fg = colors.white;
-        };
-      };
-      inactive = {
-        a = {
-          bg = colors.transparent;
-          fg = colors.lavender;
-          gui = "bold";
-        };
-        b = {
-          bg = colors.transparent;
-          fg = colors.lavender;
-        };
-        c = {
-          bg = colors.transparent;
-          fg = colors.white;
+          insert = {
+            a = {
+              bg = colors.blue;
+              fg = colors.black;
+              gui = "bold";
+            };
+            b = {
+              bg = colors.lightgray;
+              fg = colors.blue;
+            };
+            c = {
+              bg = colors.transparent;
+              fg = colors.white;
+            };
+          };
+          visual = {
+            a = {
+              bg = colors.red;
+              fg = colors.black;
+              gui = "bold";
+            };
+            b = {
+              bg = colors.lightgray;
+              fg = colors.red;
+            };
+            c = {
+              bg = colors.transparent;
+              fg = colors.white;
+            };
+          };
+          replace = {
+            a = {
+              bg = colors.yellow;
+              fg = colors.black;
+              gui = "bold";
+            };
+            b = {
+              bg = colors.lightgray;
+              fg = colors.yellow;
+            };
+            c = {
+              bg = colors.transparent;
+              fg = colors.white;
+            };
+          };
+          command = {
+            a = {
+              bg = colors.green;
+              fg = colors.black;
+              gui = "bold";
+            };
+            b = {
+              bg = colors.lightgray;
+              fg = colors.green;
+            };
+            c = {
+              bg = colors.transparent;
+              fg = colors.white;
+            };
+          };
+          inactive = {
+            a = {
+              bg = colors.transparent;
+              fg = colors.lavender;
+              gui = "bold";
+            };
+            b = {
+              bg = colors.transparent;
+              fg = colors.lavender;
+            };
+            c = {
+              bg = colors.transparent;
+              fg = colors.white;
+            };
+          };
         };
       };
     };

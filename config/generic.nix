@@ -1,5 +1,6 @@
 {
   plugins = {
+    web-devicons.enable = true;
     nix.enable = true;
     neo-tree.enable = true;
     neocord.enable = true;
