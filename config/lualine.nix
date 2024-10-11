@@ -17,15 +17,20 @@ in {
     enable = true;
     settings = {
       tabline = {
-        lualine_a = ["buffers"];
+        lualine_a = [
+          {
+            __unkeyed = "buffers";
+            symbols.alternate_file = "";
+          }
+        ];
       };
       options = {
         globalstatus = true;
-        componentSeparators = {
+        component_separators = {
           left = "";
           right = "";
         };
-        sectionSeparators = {
+        section_separators = {
           left = "";
           right = "";
         };

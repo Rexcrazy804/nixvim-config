@@ -17,7 +17,59 @@ in {
     nixvimInjections = true;
 
     languageRegister.nu = "nu";
-    grammarPackages = [nu-grammar] ++ pkgs.vimPlugins.nvim-treesitter.allGrammars;
+
+    grammarPackages =
+      [nu-grammar]
+      ++ (with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+        rust
+        yaml
+        xml
+        vim
+        typescript
+        toml
+        sql
+        readline
+        python
+        php
+        nix
+        ninja
+        meson
+        lua
+        luadoc
+        latex
+        kotlin
+        json5
+        json
+        javascript
+        java
+        ini
+        hyprlang
+        http
+        html
+        groovy
+        go
+        glsl
+        gitignore
+        gitcommit
+        gitattributes
+        git_rebase
+        git_config
+        gdscript
+        diff
+        dart
+        cuda
+        csv
+        css
+        cpp
+        cmake
+        c_sharp
+        c
+        bibtex
+        bash
+        awk
+      ]);
+
+    # grammarPackages = [nu-grammar] ++ pkgs.vimPlugins.nvim-treesitter.allGrammars;
 
     settings = {
       indent.enable = true;
