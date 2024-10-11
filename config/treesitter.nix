@@ -1,12 +1,12 @@
 {pkgs, ...}: let
   nu-grammar = pkgs.tree-sitter.buildGrammar {
     language = "nu";
-    version = "0.0.0+rev=358c4f5";
+    version = "0.0.0+rev=e3b4c96";
     src = pkgs.fetchFromGitHub {
       owner = "nushell";
       repo = "tree-sitter-nu";
-      rev = "0bb9a602d9bc94b66fab96ce51d46a5a227ab76c";
-      hash = "sha256-A5GiOpITOv3H0wytCv6t43buQ8IzxEXrk3gTlOrO0K0=";
+      rev = "e3b4c967937cad628dca09bd098cd780d8288750";
+      hash = "sha256-DlvBRKDXOJCqyJE0BJn8omqF50pQmnceiYsihJa/opg=";
     };
   };
 in {
@@ -86,20 +86,24 @@ in {
     };
   };
 
-  extraFiles = {
-    "/queries/nu/highlights.scm".text = builtins.readFile "${nu-grammar}/queries/nu/highlights.scm";
-    "/queries/nu/injections.scm".text = builtins.readFile "${nu-grammar}/queries/nu/injections.scm";
-  };
+  extraPlugins = [
+    nu-grammar
+  ];
 
-  extraConfigLua =
-    /*
-    lua
-    */
-    ''
-      local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+  # extraFiles = {
+  #   "/queries/nu/highlights.scm".text = builtins.readFile "${nu-grammar}/queries/nu/highlights.scm";
+  #   "/queries/nu/injections.scm".text = builtins.readFile "${nu-grammar}/queries/nu/injections.scm";
+  # };
 
-      parser_config.nu = {
-        filetype = "nu",
-      }
-    '';
+  # extraConfigLua =
+  #   /*
+  #   lua
+  #   */
+  #   ''
+  #     local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+  #
+  #     parser_config.nu = {
+  #       filetype = "nu",
+  #     }
+  #   '';
 }
