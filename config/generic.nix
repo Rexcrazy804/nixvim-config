@@ -9,6 +9,16 @@
     nvim-autopairs.enable = true;
     gitsigns.enable = true;
 
+    flash = {
+      enable = true;
+      settings = {
+        search.mode = "fuzzy";
+        modes = {
+          search.enabled = true;
+        };
+      };
+    };
+
     toggleterm = {
       enable = true;
       settings = {

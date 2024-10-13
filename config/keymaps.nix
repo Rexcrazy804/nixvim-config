@@ -66,5 +66,12 @@
       key = "<leader>fD";
       options.desc = "Find LSP workspace symbols";
     }
+
+    # Flash
+    {
+      action = "<CMD>lua require('flash').jump()<CR>";
+      key = "<leader>/";
+      options.desc = "FLASH jump";
+    }
   ];
 }
