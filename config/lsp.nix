@@ -9,7 +9,7 @@
 
       servers = {
         texlab.enable = true;
-        rust-analyzer = {
+        rust_analyzer = {
           enable = true;
 
           installCargo = false;
@@ -28,13 +28,21 @@
 
         clangd.enable = true;
 
-        nil-ls = {
+        # nil-ls = {
+        #   enable = true;
+        #   settings.nix = {
+        #     flake = {
+        #       autoEvalInputs = false;
+        #       nixpkgsInputName = "nixpkgs";
+        #     };
+        #     formatting.command = ["alejandra"];
+        #   };
+        # };
+
+        nixd = {
           enable = true;
-          settings.nix = {
-            flake = {
-              autoEvalInputs = false;
-              nixpkgsInputName = "nixpkgs";
-            };
+          settings = {
+            nixpkgs.expr = "import <nixpkgs> {}";
             formatting.command = ["alejandra"];
           };
         };
