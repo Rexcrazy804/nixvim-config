@@ -19,6 +19,15 @@
             check = {
               command = "clippy";
               invocationLocation = "workspace";
+              extraArgs = [
+                "--"
+                "--no-deps"
+                "-Dclippy::correctness"
+                "-Dclippy::complexity"
+                "-Wclippy::perf"
+                "-Wclippy::pedantic"
+              ];
+              features = "all";
             };
 
             diagnostics.styleLints.enable = true;

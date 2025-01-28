@@ -4,7 +4,7 @@
     nix.enable = true;
     neo-tree.enable = true;
     neocord.enable = true;
-    nvim-colorizer.enable = true;
+    colorizer.enable = true;
     which-key.enable = true;
     nvim-autopairs.enable = true;
     gitsigns.enable = true;
@@ -42,7 +42,7 @@
 
     fidget = {
       enable = true;
-      notification.window.winblend = 0;
+      settings.notification.window.winblend = 0;
     };
   };
 }
