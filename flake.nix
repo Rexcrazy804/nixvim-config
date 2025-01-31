@@ -50,6 +50,14 @@
           };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
+        flutter = nvim.extend {
+            plugins.flutter-tools = {
+              enable = true;
+              settings = {
+                widget_guides.enabled = true;
+              };
+            };
+        };
       in {
         formatter = pkgs.alejandra;
         checks = {
@@ -60,6 +68,7 @@
         packages = {
           # Lets you run `nix run .` to start nixvim
           default = nvim;
+          inherit flutter;
         };
       };
     };
