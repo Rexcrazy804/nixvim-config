@@ -1,3 +1,4 @@
+# WARNING MIGRATED TO [Zaphkiel](https://github.com/Rexcrazy804/Zaphkiel)
 # Rexiel's NvChadLite Nixvim configuration
 
 This is a very basic template to mimic the features of Nvchad that I frequent
